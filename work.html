@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>My WORK</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgba(105, 88, 80, 0.849);
+        }
+        .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr 1fr);
+                column-gap: 15px;
+                width: 1200px;
+                margin: 100px auto 0;
+                max-width: 100%;
+                background-color: rgba(105, 88, 80, 0.849);
+            }
+        .img__container {
+            display: flex;
+            flex-direction: column;
+            height: 1000px;
+            align-items: center;
+            justify-content: space-around ;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .container img {
+            object-fit: cover;
+            margin-bottom: 10px;
+            padding: 0;
+            box-shadow: 0px 0px 5px 3px rgba(182, 140, 91, 0.459);
+        }
+        div img:last-child {
+            margin-bottom: 10px;    
+        }
+        .large {
+            width: 400px;
+            height: 340px;
+        }
+        .small {
+            width: 200px;
+            height: 300px;
+            overflow: hidden;
+        }
+        #opened {
+            display: none;
+            position: fixed;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .opened-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .closed {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 60px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        p{
+            color: whitesmoke;
+        }
+        h3{
+            color: white;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top:0px;
+            bottom:0px;
+            left: 100px;
+            width: 400px ;
+            height: 1000px;
+            overflow: hidden;
+        }
+        .about__art__text{
+            position: absolute;
+            left: 410px;
+        }
+        .about__art__text__2{
+            position: absolute;
+            top: 300px;
+            left: 410px;
+        }
+        .text:hover .about__art__text__2 {
+            top: 400px;
+            left: 0px;
+            animation: 4s show ease;
+        }
+        .text:hover .about__art__text {
+            top:20px;
+            left:0px;
+            animation: 3s show ease;
+        }
+        .about__art__text__3{
+            position: absolute;
+            top: 600px;
+            left: 410px;
+        }
+        .text:hover .about__art__text__3{
+            top: 700px;
+            left: 0px;
+            animation: 5s show ease;
+        }
+        @keyframes show {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            let openedWindow = document.getElementById("opened");
+            let openedImg = document.querySelector(".opened-img img");
+            let closeButton = document.getElementsByClassName("closed")[0];
+    
+            let images = document.images;
+    
+            for (let i = 0; i < images.length; i++) {
+                images[i].addEventListener("click", imageClick, false);
+            }
+    
+            closeButton.addEventListener("click", function () {
+                openedWindow.style.display = "none";
+            })
+    
+    
+            function imageClick(e) {
+                let img = e.target;
+                openedWindow.style.display = "block";
+                openedImg.src = img.currentSrc;
+                openedImg.style.width = img.naturalWidth;
+                openedImg.style.height = img.naturalHeight;
+            }
+        }
+    </script>
+    <body>
+        <div class="container">
+            <div class="img__container">
+                <img class="large" name="image" src="images/picts-1.jpg" alt="">
+                <img class="small" name="image" src="images/photo_2021-11-03_00-18-53.jpg" alt="">
+                <img class="large" name="image" src="images/изображение_viber_2021-11-02_22-22-15-724.jpg" alt="" >
+            </div>  
+            <div class="text">
+                <div class="about__art__text">
+                    <h3>This picture is about</h3>
+                    <hr>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Ipsum distinctio cupiditate maiores sed dicta earum ullam provident 
+                    facilis labore nam. Ipsam corrupti mollitia voluptas minima tenetur 
+                    doloremque iure doloribus libero. Quibusdam similique, tenetur numquam
+                    quos reiciendis eveniet quo non dolore, iusto quisquam ut fuga quis, 
+                    harum natus rerum aliquid ipsum aperiam in! Atque in molestias ullam 
+                    ducimus, dolores nihil ratione!</p>
+                </div>
+            
+                <div class="about__art__text__2">
+                    <h3>This picture is about</h3>
+                    <hr>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Ipsum distinctio cupiditate maiores sed dicta earum ullam provident 
+                    facilis labore nam. Ipsam corrupti mollitia voluptas minima tenetur 
+                    doloremque iure doloribus libero. Quibusdam similique, tenetur numquam
+                    quos reiciendis eveniet quo non dolore, iusto quisquam ut fuga quis, 
+                    harum natus rerum aliquid ipsum aperiam in! Atque in molestias ullam 
+                    ducimus, dolores nihil ratione!</p>
+                </div>
+                <div class="about__art__text__3">
+                    <h3>This picture is about</h3>
+                    <hr>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Ipsum distinctio cupiditate maiores sed dicta earum ullam provident 
+                    facilis labore nam. Ipsam corrupti mollitia voluptas minima tenetur 
+                    doloremque iure doloribus libero. Quibusdam similique, tenetur numquam
+                    quos reiciendis eveniet quo non dolore, iusto quisquam ut fuga quis, 
+                    harum natus rerum aliquid ipsum aperiam in! Atque in molestias ullam 
+                    ducimus, dolores nihil ratione!</p>
+                </div>
+            </div> 
+        </div>
+    
+        <div id="opened" class="opened">
+            <div class="opened-img">
+                <div class="closed">&times;</div>
+                <img src="" alt="">
+            </div>
+        </div>
+</body>
+</html>

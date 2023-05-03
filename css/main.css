@@ -1,0 +1,218 @@
+body{
+    font-family: 'Kaushan Script', cursive;
+    margin: 0;
+    font-size: 15px;
+    color: rgb(98, 95, 95);
+    line-height: 1,6;
+}
+h1,h2,h3,h4,h5{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+/*container*/
+.container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 79, 79, 0.745); 
+}
+/* intro */
+.intro{
+    /* margin: auto; */
+    width: 100%;
+    height: 100vh;
+    background: url("../images/14.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* header */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    top:580px;
+    height:40px;
+    width:100%;
+}
+footer a img{
+    width: 29px;
+    height: 29px;
+}
+footer a, footer p{
+    display: block;
+    margin-right: 20px;
+    color: black;    
+}
+
+footer img:hover{
+    transform: translateY(-25px);
+    transition: .2s linear;
+}
+/* header__inner */
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(211, 231, 232);
+    opacity: 0.33;
+    z-index: -1;
+    opacity: 0.33;
+    transition-duration: 0.4s; 
+}
+.header__inner:hover{
+    background-color:transparent;
+    opacity: 1;
+}
+/* logo */
+.logo{
+    margin-left: 48px;
+    font-size: 30px;
+    font-weight: 700;
+    color: whitesmoke
+}
+/* Nav */
+.nav{
+    font-size: 16px;
+    text-transform: uppercase;   
+}
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgba(194, 25, 47, 0.836);
+    transition: color .2s linear;
+    font-weight: 700;
+    position: relative;
+}
+.nav__link:after{
+    content:"";
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color:rgba(194, 25, 47, 0.836);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: .2s linear;
+}
+.nav__link:hover{
+    color: whitesmoke;  
+    opacity: 1;
+}
+
+.nav__link:hover:after{
+    opacity: 1;   
+}
+/* Nav social web icons */
+.icons_link{
+            margin-left: 20px;
+            position: relative;
+            width: 180px;
+            height: 70px;
+            overflow: hidden;
+        }
+        .icons_link .icon_image,
+        .icons_link .icon_text {
+            position: absolute;
+            box-sizing: border-box;
+
+        }
+        .icons_link:hover .icon_image{
+            transform: translateY(10px); 
+            transform: translateX(145px); 
+            transition-duration: 1s;  
+            filter: saturate(300%);
+            opacity: 0.8;
+        } 
+        .icons_link .icon_text {
+            left: 100%;
+            top: -10px;
+            padding: 20px 20px;
+            color: whitesmoke;
+            transition: 0.5s;
+        }
+        
+        .icons_link:hover .icon_text {
+            top: 10;
+            left: 0;
+        }
+        .icons_link .icon_image{
+            margin-top: 5px;
+        }
+/* opened text */
+.block_1{
+    position:relative;
+    width:800px;
+    height:250px;
+    overflow:hidden;
+    left: 248px;
+    top: 236px;
+    background-size:cover;
+} 
+ .block_2, .block_3{
+    position:absolute;
+    top: 250px;
+    font-size:20px;
+    width: 300px;
+    height: 300px;   
+    color:whitesmoke
+}
+ .block_2, .block_3 p {
+    padding: 10px 5px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    
+    
+}  
+.block_3{
+    left: 327px;
+} 
+/* .block_4{
+    position: absolute;
+    top:250px;
+    width: 600px;
+    height: 600px;
+    left: 600px;
+} */
+ .block_1:hover .block_2{
+    visibility:visible;
+    transition:1s;
+    -webkit-transition:1s;
+    transform:translatey(-250px);
+    -webkit-transform:translatey(-250px);  
+ }  
+ .block_1:hover .block_3{
+    
+    transition: 1.6s;
+    -webkit-transition:1.6s;
+    transform:translatey(-220px);
+    -webkit-transform:translatey(-220px);  
+ } 
+.block_1:hover{
+    filter:sepia(50%);
+    -webkit-filter:sepia(60%);
+    transition:0.6s;
+    -webkit-transition:0.6s;
+} 
+ 
